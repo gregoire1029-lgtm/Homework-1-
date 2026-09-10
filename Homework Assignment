@@ -5,9 +5,11 @@ public class Debug {
          System.out.println("how old are you");
          String input = sc.nextLine();
          System.out.println("You are " + input + " years old");
-         System.out.println("Those two numbers together add up to " + (10 + 37));
+         int num1 = 10;
+         int num2 = 37;
+         System.out.println("Those two numbers together add up to " +(num1 + num2));
 
     }
 }
-// I learned how to make 10 and 37 not just print 10 and 37, pretty simple just paranthesis
+// I learned how to make 10 and 37 work, pretty simple just paranthesis
 //Also the scanner and input stuff how to do specifically it was good to go over again
