@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Debug {
+    public static void main(String[] args) {
+        int var1 = 4;
+        if (var1 > 4){System.out.println("Var1 is greater than 4"); }
+        else if (var1 == 4) {System.out.println("Its 4");}//forgot to write var == 4 
+        else{System.out.println("Var1 is less than 4"); }
+        int var2 = 6; // this one is fine 
+        if (var2 == 5){System.out.println("Var2 is 5");}
+        else if (var2 > 5){System.out.println("Var2 is greater than 5");} 
+        else if (var2 < 5){ System.out.println("Var2 is less than 5");} 
+        else{System.out.println("Var2 is 6"); }
+        int var3 = 5; // switched the symbol to less than the wording kind of confused me so this could be wrong
+        if (var3 < 10){ System.out.println("Var3 is less than 10"); } 
+        else {System.out.println("Var3 is greater than 10");}
+
+
+        //cause tehres a ; after the if  
+        if ("Marist".equals("marist")){
+            System.out.println("Marist college!");
+        } else {
+            System.out.println("Not marist college :(!");
+        }
+
+        //second part
+
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Question 1 is whats 2+3?");
+        int choice1 = scanner.nextInt();
+        int score = 0;
+        if (choice1 == 5) {score += 1; System.out.println("nice one yes plus 1");}
+        else {System.out.println("NO!");}
+
+        System.out.println("Question 2 is what is the capital of guatemala (make sure capitilization)");
+        String choice2 = scanner.nextLine();
+        if (choice2.equals("Guatemala City"))
+        {score += 1; System.out.println("nice ");}
+        else if (choice2.equals("Guatemala city"))
+        {score += 1; System.out.println("nice ");}
+        else if (choice2.equals("guatemala city"))
+        {score += 1; System.out.println("nice ");}
+        else if (choice2.equals("guatemala City"))
+        {score += 1; System.out.println("nice ");}
+        else {System.out.println("Nada wrong");}
+        System.out.println("Question 3 is what is 2x5-2");
+        int choice3 = scanner.nextInt();
+        if (choice3 == 8)
+        {score += 1; System.out.println("good answer ");}
+        else
+        {System.out.println("not well done ");}
+        System.out.println ("your final score is " + score);
+
+    }}
+
+//one thing i was confused on was scanner.nextInt vs just scanner.nextLine
+//i had to search up how to do that cause nextline wouldnt work on the int
+//and I guess its just Int for integer and Line for string besides hat just repeating a lot of else if 
+
