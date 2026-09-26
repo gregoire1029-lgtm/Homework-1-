@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+
+        //P1: This one only prints 0-9, can you fix it so it prints 1-10?
+        System.out.println("Problem 1");
+        for (int i = 1; i < 11; i++){
+            System.out.println(i);
+        }
+
+        //P2: Ask the user for a number. Create a loop to find the factorial of it
+        //(factorial = X!, X being the user input, Factorials are every digit before X multiplied together)
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Problem 2");
+        System.out.println("Enter a number and I will tell you the factorial: ");
+        int input = sc.nextInt();
+        int facts = 1;
+        //here's a hint
+        for (int i = 1; i <= input; i++){
+            facts = facts * i;
+            System.out.println(facts);
+        }
+
+        //P3: Ask the user for a number, and then add together every OTHER digit (starting from 1)
+        System.out.println("Problem 3");
+        System.out.println("Enter a number and I will tell you the sum of every other number: ");
+        int input2 = sc.nextInt();
+        int sum = 0;
+        for (int i = 1; i<=input2; i+=2){
+            sum = sum + i;
+        }
+        //Its cause its always set to true, you can just set it to false in it
+        System.out.println("Problem 4");
+        boolean run = true;
+        while (run == true){
+            System.out.println("I printed once!");
+            boolean run = false;
+        }
+
+        //to be frank I had to search this one up because i had no clue
+        //how to do it from the slides or what we did in class
+        System.out.println("Problem 5");
+        String input3 = sc.nextLine();
+        String reverse = "";
+        int input4 = input3.length();
+        for (int i = input4 - 1; i >=0; i--){
+            reverse = reverse + input3.charAt(i);
+        }
+        System.out.println(reverse);
+
+        System.out.println("enter something");
+        String inputer = sc.nextLine();
+        int size = inputer.length();
+        for (int i = 0; i<size; i++)
+        {
+            System.out.println(inputer.charAt(i));
+        }
+        //I searched up charAt based off the loop instructions and then got to w3schools
+        //and used their online example compiler i didnt know how to find the length but then
+        //i just searched up how to know length of string in java and i got the .length instructions
+        //and then i just used basically the same thing for the loops section
+        //for what it does length says how many charcters in the string, charAt
+        //actually finds a certain position so when its at 0 its the first character
+        //I dont link for loops at all i kinda hate them but at least its pretty simple
+        //at this point just copying and pasting the similar thing
+
+
+    }
+}
