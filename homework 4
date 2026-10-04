@@ -20,7 +20,7 @@ public class Main {
         for (int i = 0; i < maxMe.length; i++){
             if (maxMe[i] > max){
                 max = maxMe[i];}}
-        }System.out.println("the biggest number is " + max);
+        System.out.println("the biggest number is " + max);
         int[] myArray = {10,3,295,38,20,3,4,267,2445,10,5566,87,93,17,10,2,87,267,3176,3,82};
         for(int i = 0; i < myArray.length; i++){int number = myArray[i];
             //i check if this number already showed up earlier in the array so i dont end up doing the same one twice
