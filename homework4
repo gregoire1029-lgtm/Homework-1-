@@ -1,0 +1,45 @@
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {System.out.println("Array Practice");
+        String[] nameArray = {"Nanuq", "Muzjik", "Maurice", "Gypsy"};
+        int[] numArray;
+        int newArray[] = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        String[] sortMe = {"Apple","Kiwi","Orange","Banana","Watermelon","Strawberry"};
+        Arrays.sort(sortMe);
+        System.out.println(Arrays.toString(sortMe));
+        //After this, you cannot use the array helper file, gotta go back to the old ways!!
+        int addMe[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        //How would we add every index together and print out the sum??
+        //A small hint:
+        int sum = 0;
+        for (int i = 0; i < addMe.length; i++){
+            sum = sum + addMe[i];}
+        System.out.println("sum is " + sum);
+        //thinking one! here's an array
+        int maxMe[] = {280, 4892, 134, 23, 1937, 5329, 932, 89};
+        int max = maxMe[0];
+        for (int i = 0; i < maxMe.length; i++){
+            if (maxMe[i] > max){
+                max = maxMe[i];}}
+        System.out.println("the biggest number is " + max);
+        int[] myArray = {10,3,295,38,20,3,4,267,2445,10,5566,87,93,17,10,2,87,267,3176,3,82};
+        for(int i = 0; i < myArray.length; i++){int number = myArray[i];
+            //i check if this number already showed up earlier in the array so i dont end up doing the same one twice
+            boolean first = true; for (int j = 0; j < i; j++){
+                if (myArray[j] == number){
+                    first = false;}}
+            //then i count how many times it shows up in the whole array
+            int count = 0;
+            for (int j = 0; j < myArray.length; j++){
+                if (myArray[j] == number){count = count + 1;}}
+            //only the first time see it and only if there is more than one of them
+            if (first == true){
+                if (count > 1){
+                    //skipping printing the number and its count here
+                    }}}
+        //the two loops inside each other messed me up for a while because i kept
+        //counting the same number over and over then i figured out i had to check the spots
+        //before the one im on to see if i already did that one also arrays use length
+        //but strings use length() which i had to search up
+        //i hate arrays👎
+    }}
