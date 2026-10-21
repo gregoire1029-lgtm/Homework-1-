@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        printwelcome();
+        System.out.println("What exercise did you do?");
+        String exercisename = sc.nextLine();
+        //what weight they used
+        System.out.println("what weight did you use?");
+        double weight = sc.nextDouble();
+        System.out.println("How many sets did you do?");
+        int numberofsets = sc.nextInt();
+        int totalreps = 0;//total of reps across all sets
+        //ask for reps once per set and add them up
+        for (int i = 0; i < numberofsets; i++){
+            System.out.println("Set " + (i+1) + " reps:");
+            totalreps = totalreps + sc.nextInt();}
+        //work out total volume and print
+        double totalvolume = calculatevolume(totalreps, weight);
+        System.out.println("Total volume for " + exercisename + ": " + totalvolume);
+        //check if big workout
+        if (totalvolume > 3000){
+            System.out.println("Heavy workout!");
+        } else {System.out.println("Little workout :(");}}
+    //prints the intro message
+    public static void printwelcome() {
+        System.out.println("Gym Workout Tracker");
+        System.out.println("Log your sets and see how your workout went");}
+    //returns total weight moved which is just total reps times the weight used
+    public static double calculatevolume(int totalreps, double weight) {
+        return totalreps * weight;}}
