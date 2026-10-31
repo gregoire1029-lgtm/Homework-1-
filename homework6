@@ -1,0 +1,45 @@
+import java.util.Random;
+public class Main {
+    public static void main(String[] args){
+        //these the students
+        student student1 = new student("joe", "senior", 1, 1);
+        student student2 = new student("jeff", "junior", 2, 4);
+        student student3 = new student("clonte", "freshman", 3, 3);
+        student student4 = new student("sdiol", "sophomore", 2.1, 5);
+        student student5 = new student("sdik", "senior", 4, 2);
+        System.out.println(student1.name + " honor roll: " + student1.ishonorroll());
+        System.out.println(student3.name + " honor roll: " + student3.ishonorroll());
+        System.out.println(student4.name + " honor roll: " + student4.ishonorroll());
+        System.out.println(student2.name + " honor roll: " + student2.ishonorroll());
+        System.out.println(student5.name + " honor roll: " + student5.ishonorroll());
+        //makes the random id
+        Random rand = new Random();
+        int randomid = rand.nextInt(5) + 1;
+        System.out.println("todays free lunch id is " + randomid);
+        student1.freelunch(randomid);
+        student2.freelunch(randomid);
+        student3.freelunch(randomid);
+        student4.freelunch(randomid);
+        student5.freelunch(randomid);}}
+
+public class student{
+    String name;
+    String year;
+    double gpa;
+    int id;
+    public student(String n, String y, double g, int i){
+        name = n;
+        year = y;
+        gpa = g;
+        id = i;}
+    public boolean ishonorroll(){
+        return this.gpa > 3.6;
+    }
+    public void freelunch(int randomid){
+        if (this.id == randomid){
+            System.out.println(this.name + " gets free lunch today");
+        } else {
+            System.out.println(this.name + " doesnt get free lunch today");}}}
+//i learned how to make a random int thing cause we never
+//went over it in class, besides that not too bad mostly
+//rehashing
