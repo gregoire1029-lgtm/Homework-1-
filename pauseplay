@@ -1,0 +1,57 @@
+public class Main
+{ public static void main(String[] args){
+        //person
+        person person1 = new person("Greg", 21);
+        System.out.println(person1.sayhi());
+        //books
+        book book1 = new book("the giving tree", "shel silverstein", "kids");
+        book book2 = new book("dune", "frank herb", "science fiction");
+        book1.isgivingtree();
+        book2.isgivingtree();
+        //cars
+        car car1 = new car("bmw", 2008);
+        car car2 = new car("honda", 2019);
+        car car3 = new car("toyota", 2001);
+        car1.isold();
+        car2.isold();
+        car3.isold();
+    }
+}
+public class book {
+    String title;
+    String author;
+    String genre;
+    public book(String t, String a, String g){
+        title = t;
+        author = a;
+        genre = g;}
+    //check if book is the giving tree
+    void isgivingtree(){
+        if (this.title == "the giving tree"){
+            System.out.println(this.title + " is the giving tree shel silverstein looks creepy on the book");
+        } else {
+            System.out.println(this.title + " not the giving tree");
+        }}
+}
+public class person {
+    String name;
+    int age;
+    public person(String n, int a){
+        name = n;
+        age = a;}
+    String sayhi(){
+        return this.name + " says hi";
+    }
+}
+public class car {
+    String brand;
+    int year;
+    public car(String b, int y){
+        brand = b;
+        year = y;}
+    void isold(){
+        if (this.year < 2010){
+            System.out.println(this.brand + " is an old car");
+        } else {
+            System.out.println(this.brand + " is a newer car");
+        }}}
